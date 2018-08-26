@@ -26,7 +26,7 @@ class PostsController < ApplicationController
 	def update
   	@post = Post.find(params[:id])
 		if @post.update_attribute(params[:post])
-		attr_reader :attr_namesedirect_to post_path(@post)
+		redirect_to post_path(@post)
 	end
 	
 end
