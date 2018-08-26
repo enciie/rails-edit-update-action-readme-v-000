@@ -653,3 +653,19 @@ Did you mean?  try):
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.1ms)
+
+
+Started PUT "/posts/1" for 104.186.142.120 at 2018-08-26 10:35:18 +0000
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4OT2tL1/tRMU3UWw65PKbSf9rPCogwhJxMFdbMpxsZGhkZcYLcIoKB/WurbzVdoi4OwUh0RIy9Q8fZT5TNf2Q==", "title"=>"Rails Introduction Quiz", "description"=>"asdfasdf edit", "commit"=>"Submit Post", "id"=>"1"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://165.227.31.208:60607/posts/1
+Completed 302 Found in 14ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/1" for 104.186.142.120 at 2018-08-26 10:35:18 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.2ms)
