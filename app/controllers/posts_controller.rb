@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 		if @post.title != params[:title] && @post.description != params[:description]
 				@post.update(title: params[:title], description: params[:description])
 		elsif 
-				@post.title != params[:title]
+				@post.title == params[:title]
 				@post.title = params[:title]
 		else
 			@post.description = params[:description]
