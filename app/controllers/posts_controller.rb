@@ -25,14 +25,7 @@ class PostsController < ApplicationController
 
 	def update
   	@post = Post.find(params[:id])
-		if @post.title != params[:title] && @post.description != params[:description]
-			@post.update(title: params[:title], description: params[:description])
-		elsif @post.title == params[:title]
-			@post.description = params[:description]
-		else @post.description == params[:description]
-			@post.description = params[:description]
-		end
-		@post.save
+		if @post.update_attributes params[:post]
 		redirect_to post_path(@post)
 	end
 	
