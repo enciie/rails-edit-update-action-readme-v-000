@@ -735,3 +735,11 @@ Processing by PostsController#show as HTML
   [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/1/edit" for 104.186.142.120 at 2018-08-26 10:41:06 +0000
+
+SyntaxError (/home/enciie/rails-edit-update-action-readme-v-000/app/controllers/posts_controller.rb:32: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/posts_controller.rb:32: syntax error, unexpected end-of-input, expecting keyword_end
+
+
